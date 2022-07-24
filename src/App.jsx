@@ -1,13 +1,23 @@
 import React, { Component } from 'react';
-import { nanoid } from 'nanoid';
 import './App.css';
-import List from './components/List';
-
+import axios from 'axios';
 export default class App extends Component {
+  getStudentData = params => {
+    console.log('params', params);
+    axios.get('aaa').then(
+      res => {
+        console.log('res', res);
+      },
+      err => {
+        console.log('err:', err)
+      }
+    );
+  };
+
   render() {
     return (
-      <div className="app">
-        <List nanoid={nanoid()} />
+      <div className='app'>
+        <button onClick={this.getStudentData}>点我获取学生数据</button>
       </div>
     );
   }
