@@ -2,9 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import axios from 'axios';
 export default class App extends Component {
-  getStudentData = params => {
-    console.log('params', params);
-    axios.get('aaa').then(
+  getStudentData = () => {
+    axios.get('http://localhost:3000/students').then(
       res => {
         console.log('res', res);
       },
