@@ -22,6 +22,7 @@ export default class App extends Component {
 
 							{/* 在React中靠路由链接实现切换组件--编写路由链接 */}
 							<Link className="list-group-item" to="/about">About</Link>
+							hr
 							<Link className="list-group-item" to="/home">Home</Link>
 						</div>
 					</div>
