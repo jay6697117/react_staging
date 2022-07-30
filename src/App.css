@@ -1,8 +1,28 @@
-.header{
+.header {
   background-color: lightblue;
+  padding: 20px 10px;
 }
 
-.content{
-  padding:10px;
+.header h3 {
+  margin: 0;
+}
+
+.content {
+  padding: 10px;
+  background-color: #eee;
+}
+
+.content .list-group .list-group-item {
+  text-decoration: none;
+}
+
+.content span {
+  padding: 5px;
+}
+
+.content span.active {
+  color: red;
   background-color: #ccc;
+  padding: 5px;
+  border-radius: 2px;
 }
