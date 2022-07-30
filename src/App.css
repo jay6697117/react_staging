@@ -14,15 +14,11 @@
 
 .content .list-group .list-group-item {
   text-decoration: none;
-}
-
-.content span {
-  padding: 5px;
-}
-
-.content span.active {
-  color: red;
-  background-color: #ccc;
   padding: 5px;
   border-radius: 2px;
+}
+
+.content .list-group .list-group-item.active {
+  color: red;
+  background-color: #ccc;
 }

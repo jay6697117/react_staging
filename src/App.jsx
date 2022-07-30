@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link, Route } from 'react-router-dom';
+import { Link, Route, BrowserRouter } from 'react-router-dom';
 import Home from './components/Home';
 import About from './components/About';
 import './App.css';
@@ -10,6 +10,7 @@ export default class App extends Component {
     this.setState({ path });
   };
   render() {
+    console.log('render this.props : ', this.props);
     const { path } = this.state;
     return (
       <div>
@@ -27,21 +28,31 @@ export default class App extends Component {
               {/* <a className="list-group-item" href="./about.html">About</a>
 							<a className="list-group-item active" href="./home.html">Home</a> */}
               {/* 在React中靠路由链接实现切换组件--编写路由链接 */}
-              <Link className='list-group-item' to='/home' onClick={() => this.handleClick('/home')}>
-                <span className={path === '/home' ? 'active' : ''}>Home</span>
-              </Link>
-              &nbsp;&nbsp;
-              <Link className='list-group-item' to='/about' onClick={() => this.handleClick('/about')}>
-                <span className={path === '/about' ? 'active' : ''}>About</span>
-              </Link>
+              <BrowserRouter>
+                <Link
+                  className={path === '/home' ? 'list-group-item active' : 'list-group-item'}
+                  to='/home'
+                  onClick={() => this.handleClick('/home')}>
+                  Home
+                </Link>
+                &nbsp;&nbsp;
+                <Link
+                  className={path === '/about' ? 'list-group-item active' : 'list-group-item'}
+                  to='/about'
+                  onClick={() => this.handleClick('/about')}>
+                  About
+                </Link>
+              </BrowserRouter>
             </div>
           </div>
           <div className='col-xs-6'>
             <div className='panel'>
               <div className='panel-body'>
                 {/* 注册路由 */}
-                <Route path='/about' component={About} />
-                <Route path='/home' component={Home} />
+                <BrowserRouter>
+                  <Route path='/about' component={About} />
+                  <Route path='/home' component={Home} />
+                </BrowserRouter>
               </div>
             </div>
           </div>
