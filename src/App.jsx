@@ -11,6 +11,8 @@ export default class App extends Component {
   };
   render() {
     console.log('render this.props : ', this.props);
+    let { children } = this.props;
+    children = [...children];
     const { path } = this.state;
     return (
       <div>
@@ -56,6 +58,11 @@ export default class App extends Component {
               </div>
             </div>
           </div>
+        </div>
+        <div className='row footer'>
+          {children.map((item, index) => {
+            return <div key={index}>{item}</div>;
+          })}
         </div>
       </div>
     );

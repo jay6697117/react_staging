@@ -10,9 +10,9 @@ import App from './App';
 ReactDOM.render(
   // <BrowserRouter>
     <App>
-      <h1>aaa</h1>
-      <h1>bbb</h1>
-      <h1>ccc</h1>
+      <div>aaa</div>
+      <div>bbb</div>
+      <div>ccc</div>
     </App>
   // </BrowserRouter>
   ,
