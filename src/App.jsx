@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { Link, Route } from 'react-router-dom';
-import Home from './components/Home';
-import About from './components/About';
+import Home from './pages/Home';
+import About from './pages/About';
+import List from './components/List';
 import './App.css';
 
 export default class App extends Component {
@@ -13,7 +14,6 @@ export default class App extends Component {
     console.log('render this.props : ', this.props);
     let { children } = this.props;
     children = children ? [].concat(children) : [];
-    console.log('render children:', children);
     const { path } = this.state;
     return (
       <div>
@@ -59,9 +59,7 @@ export default class App extends Component {
         </div>
 
         <div className='row footer'>
-          {children.map((item, index) => {
-            return <div key={index}>{item}</div>;
-          })}
+          <List children={children} />
         </div>
       </div>
     );
