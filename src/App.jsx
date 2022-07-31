@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import { Link, Route, BrowserRouter } from 'react-router-dom';
 import { Link, Route } from 'react-router-dom';
 import Home from './components/Home';
 import About from './components/About';
@@ -26,7 +25,6 @@ export default class App extends Component {
           </div>
         </div>
 
-        {/* <BrowserRouter> */}
         <div className='row content'>
           <div className='col-xs-2 col-xs-offset-2'>
             <div className='list-group'>
@@ -59,7 +57,6 @@ export default class App extends Component {
             </div>
           </div>
         </div>
-        {/* </BrowserRouter> */}
 
         <div className='row footer'>
           {children.map((item, index) => {
