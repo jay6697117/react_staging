@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Link, Route } from 'react-router-dom';
-import Home from './pages/Home';
-import About from './pages/About';
-import Children from './components/Children';
+import Home from './pages/Home'; // 路由组件
+import About from './pages/About'; // 路由组件
+import Children from './components/Children'; // 一般组件
 import './App.css';
 
 export default class App extends Component {
@@ -11,7 +11,7 @@ export default class App extends Component {
     this.setState({ path });
   };
   render() {
-    console.log('render this.props : ', this.props);
+    // console.log('App this.props : ', this.props);
     let { children } = this.props;
     children = children ? [].concat(children) : [];
     const { path } = this.state;
