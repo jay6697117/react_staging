@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link, Route } from 'react-router-dom';
+import { NavLink, Route } from 'react-router-dom';
 import Home from './pages/Home'; // 路由组件
 import About from './pages/About'; // 路由组件
 import Children from './components/Children'; // 一般组件
@@ -20,7 +20,9 @@ export default class App extends Component {
         <div className='row header'>
           <div className='col-xs-offset-2 col-xs-8'>
             <div className='page-header'>
-              <h3>React Router Demo</h3>
+              <h3>
+                React Router Demo <span style={{ color: 'blue' }}>{path ? '- ' + path : ''}</span>
+              </h3>
             </div>
           </div>
         </div>
@@ -32,19 +34,21 @@ export default class App extends Component {
               {/* <a className="list-group-item" href="./about.html">About</a>
 							<a className="list-group-item active" href="./home.html">Home</a> */}
               {/* 在React中靠路由链接实现切换组件--编写路由链接 */}
-              <Link
-                className={path === '/home' ? 'list-group-item active' : 'list-group-item'}
+              <NavLink
+                activeClassName='atguigu'
+                className='list-group-item'
                 to='/home'
                 onClick={() => this.handleClick('/home')}>
                 Home
-              </Link>
+              </NavLink>
               &nbsp;&nbsp;
-              <Link
-                className={path === '/about' ? 'list-group-item active' : 'list-group-item'}
+              <NavLink
+                activeClassName='atguigu'
+                className='list-group-item'
                 to='/about'
                 onClick={() => this.handleClick('/about')}>
                 About
-              </Link>
+              </NavLink>
             </div>
           </div>
           <div className='col-xs-6'>
@@ -59,7 +63,9 @@ export default class App extends Component {
         </div>
 
         <div className='row footer'>
-          <Children children={children} />
+          <div className='col-xs-offset-2 col-xs-8'>
+            <Children children={children} />
+          </div>
         </div>
       </div>
     );

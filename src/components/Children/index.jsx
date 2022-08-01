@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
-export default class Home extends Component {
+export default class Children extends Component {
   render() {
-    console.log('Children this.props :>> ', this.props);
+    // console.log('Children this.props :>> ', this.props);
     const { children } = this.props;
     return (
       <div>

@@ -3,26 +3,26 @@
   padding: 20px 10px;
 }
 
-.header h3 {
+/* .header h3 {
   margin: 0;
-}
+} */
 
 .content {
   padding: 10px;
   background-color: #eee;
 }
 
-.content .list-group .list-group-item {
+/* .content .list-group .list-group-item {
   text-decoration: none;
   padding: 5px;
   border-radius: 2px;
-}
+} */
 
-.content .list-group .list-group-item.active {
+/* .content .list-group .list-group-item.active {
   color: red;
   background-color: #ccc;
-}
+} */
 
 .footer {
-  background-color: skyblue;
+  background-color: #ccc;
 }
