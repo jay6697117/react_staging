@@ -22,15 +22,15 @@ export default class App extends Component {
 							<a className="list-group-item active" href="./home.html">Home</a> */}
 
               {/* 在React中靠路由链接实现切换组件--编写路由链接 */}
-              <MyNavLink to='/about'>
-                <h4>About</h4>
-                {/* <span>About</span> */}
-                {/* About */}
-              </MyNavLink>
               <MyNavLink to='/home'>
-                <h4>Home</h4>
+                {/* <h4>Home</h4> */}
                 {/* <span>Home</span> */}
-                {/* Home */}
+                Home
+              </MyNavLink>
+              <MyNavLink to='/about'>
+                {/* <h4>About</h4> */}
+                {/* <span>About</span> */}
+                About
               </MyNavLink>
             </div>
           </div>
