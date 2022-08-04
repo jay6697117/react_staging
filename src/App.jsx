@@ -25,13 +25,13 @@ export default class App extends Component {
               {/* 在React中靠路由链接实现切换组件--编写路由链接 */}
               <MyNavLink to='/home' title="prop_title" a='prop_a' b='prop_b' c='prop_c'>
                 {/* <h4>Home</h4> */}
-                {/* <span>Home</span> */}
-                Home
+                <span>Home</span>1
+                {/* Home */}
               </MyNavLink>
               <MyNavLink to='/about'>
                 {/* <h4>About</h4> */}
-                {/* <span>About</span> */}
-                About
+                <span>About</span>2
+                {/* About */}
               </MyNavLink>
               {/* <NavLink to='/home' children='AAA' />
               <hr />
