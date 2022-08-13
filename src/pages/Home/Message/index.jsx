@@ -31,7 +31,7 @@ export default class Message extends Component {
 
 		//push跳转+携带state参数
 		this.props.history.push(`/home/message/detail`,{id,title})
-		
+
 	}
 
 	back = ()=>{
@@ -43,7 +43,7 @@ export default class Message extends Component {
 	}
 
 	go = ()=>{
-		this.props.history.go(-2)
+		this.props.history.go(-5)
 	}
 
 	render() {
