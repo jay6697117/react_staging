@@ -29,6 +29,9 @@ class Header extends Component {
 }
 
 export default withRouter(Header)
+console.log('withRouter(Header)', withRouter(Header))
+console.log('Header :>> ', Header);
+// export default Header
 
 //withRouter可以加工一般组件，让一般组件具备路由组件所特有的API
 //withRouter的返回值是一个新组件
