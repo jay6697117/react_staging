@@ -4,8 +4,11 @@
     <meta charset="UTF-8" />
     <title>TODO记事本</title>
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <!-- 相对路径在BrowserRouter模式下,刷新的时候会有丢失样式文件问题 -->
     <!-- <link rel="stylesheet" href="./css/bootstrap.css" /> -->
+    <!-- 绝对路径: 推荐 -->
     <link rel="stylesheet" href="/css/bootstrap.css" />
+    <!-- %PUBLIC_URL% 表示public目录: 推荐 -->
     <!-- <link rel="stylesheet" href="%PUBLIC_URL%/css/bootstrap.css" /> -->
     <style>
       .atguigu {
