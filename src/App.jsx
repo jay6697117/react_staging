@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { Button, DatePicker } from 'antd';
 import { WechatOutlined, WeiboOutlined, SearchOutlined } from '@ant-design/icons';
-import 'antd/dist/antd.css';
+// import 'antd/dist/antd.css';
 const { RangePicker } = DatePicker;
 
 export default class App extends Component {
   render() {
     return (
-      <div style={{padding:'20px'}}>
+      <div style={{ padding: '20px' }}>
         App....
         <hr />
         <button>点我</button>
